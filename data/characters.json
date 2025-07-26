@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Джинкс",
+    "age": "18",
+    "person_photo": "https://rus.egw.news/_next/image?url=https%3A%2F%2Fegw.news%2Fuploads%2Fnews%2F1%2F17%2F1736150065872_1736150065873.webp&w=1920&q=75"
+  },
+  {
+    "name": "Вай",
+    "age": "20",
+    "person_photo": "https://www.soyuz.ru/public/uploads/files/2/7475517/20211121095323f021305f93.jpg"
+  },
+  {
+    "name": "Силко",
+    "age": "40",
+    "person_photo": "https://kinotv.ru/upload/webp/100/upload/iblock/4c4/5b7x63hqeuxqelh6wggsroi4dml1v95j.webp"
+  }
+]

@@ -108,3 +108,53 @@ document.addEventListener('DOMContentLoaded', () => {
         secondsEl.textContent = count;
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '../data/characters.json', true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                const characters = JSON.parse(xhr.responseText);
+                const container = document.querySelector('.characters-list');
+
+                characters.forEach(character => {
+                    const card = document.createElement('div');
+                    card.className = 'character-card';
+
+                    card.innerHTML = `
+            <img src="${character.person_photo}" alt="${character.name}">
+            <div class="info">
+              <h3 class="name">${character.name}</h3>
+              <p class="age">Возраст: ${character.age}</p>
+            </div>
+          `;
+                    container.appendChild(card);
+                });
+            } else {
+                console.error('Ошибка загрузки JSON:', xhr.status);
+            }
+        }
+    };
+
+    xhr.send();
+});
+
+const xhr = new XMLHttpRequest();
+
+xhr.open('GET', '../data/any.json', true);
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+            const data = JSON.parse(xhr.responseText);
+            console.log('Данные из JSON:', data);
+        } else {
+            console.error('Ошибка загрузки:', xhr.status);
+        }
+    }
+};
+
+xhr.send();
+
+
